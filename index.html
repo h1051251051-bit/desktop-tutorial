@@ -3,128 +3,357 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Website Diri Saya</title>
+
+    <title>My Little Website ♡</title>
 
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background-color: #f2f2f2;
-            color: #333;
+        * {
+            box-sizing: border-box;
         }
 
+        body {
+            margin: 0;
+            font-family: "Trebuchet MS", Arial, sans-serif;
+            background: #fff0f6;
+            color: #5a4052;
+        }
+
+        /* Dekorasi */
+        .bubble {
+            position: fixed;
+            border-radius: 50%;
+            z-index: -1;
+            opacity: 0.5;
+        }
+
+        .bubble1 {
+            width: 180px;
+            height: 180px;
+            background: #ffc8dd;
+            top: 30px;
+            left: -60px;
+        }
+
+        .bubble2 {
+            width: 230px;
+            height: 230px;
+            background: #cde8ff;
+            right: -80px;
+            top: 300px;
+        }
+
+        .bubble3 {
+            width: 150px;
+            height: 150px;
+            background: #d8f3dc;
+            left: -50px;
+            bottom: 50px;
+        }
+
+        /* Header */
         header {
-            background-color: #4a90e2;
-            color: white;
             text-align: center;
-            padding: 40px 20px;
+            padding: 70px 20px 50px;
+        }
+
+        .hello {
+            font-size: 20px;
         }
 
         header h1 {
-            margin-bottom: 10px;
+            font-size: 48px;
+            margin: 10px 0;
+            color: #e75480;
         }
 
+        header p {
+            font-size: 17px;
+        }
+
+        .heart {
+            animation: lompat 1s infinite alternate;
+            display: inline-block;
+        }
+
+        @keyframes lompat {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-8px);
+            }
+        }
+
+        /* Menu */
         nav {
-            background-color: #333;
             text-align: center;
-            padding: 15px;
+            margin-bottom: 30px;
         }
 
         nav a {
-            color: white;
+            display: inline-block;
             text-decoration: none;
-            margin: 0 15px;
+            color: #7d5268;
+            background: white;
+            padding: 10px 18px;
+            margin: 5px;
+            border-radius: 20px;
+            box-shadow: 0 4px 10px #e8bfd0;
+            transition: 0.3s;
         }
 
         nav a:hover {
-            color: #4a90e2;
+            background: #ffb3c6;
+            color: white;
+            transform: translateY(-3px);
         }
 
-        section {
-            background-color: white;
-            width: 80%;
-            max-width: 800px;
-            margin: 30px auto;
+        /* Container */
+        .container {
+            width: 90%;
+            max-width: 850px;
+            margin: auto;
+        }
+
+        /* Card */
+        .card {
+            background: rgba(255, 255, 255, 0.9);
             padding: 30px;
-            border-radius: 10px;
+            margin: 25px 0;
+            border-radius: 25px;
+            box-shadow: 0 8px 20px rgba(190, 120, 150, 0.15);
         }
 
+        .card h2 {
+            color: #e75480;
+        }
+
+        /* Foto */
         .foto {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            display: block;
-            margin: 0 auto 20px;
             object-fit: cover;
+            display: block;
+            margin: auto;
+            border: 7px solid #ffd6e0;
         }
 
+        /* Biodata */
+        .biodata {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .item {
+            background: #fff4f7;
+            padding: 15px;
+            border-radius: 15px;
+        }
+
+        /* Hobi */
+        .hobi {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .hobi span {
+            background: #ffd6e0;
+            padding: 10px 15px;
+            border-radius: 20px;
+        }
+
+        /* Tombol */
+        button {
+            background: #e75480;
+            color: white;
+            border: none;
+            padding: 13px 22px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #d63f6c;
+            transform: scale(1.05);
+        }
+
+        #pesan {
+            margin-top: 15px;
+            font-weight: bold;
+            color: #e75480;
+        }
+
+        /* Footer */
         footer {
-            background-color: #333;
-            color: pink ;
             text-align: center;
-            padding: 20px;
-            margin-top: 30px;
+            padding: 30px;
+            margin-top: 40px;
+            background: #ffd6e0;
+        }
+
+        /* HP */
+        @media (max-width: 600px) {
+
+            header h1 {
+                font-size: 36px;
+            }
+
+            .biodata {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 
 <body>
 
+    <div class="bubble bubble1"></div>
+    <div class="bubble bubble2"></div>
+    <div class="bubble bubble3"></div>
+
     <header>
-        <h1>Halo, aku Fortunata Esfi Efrata Altama</h1>
-        <p>Selamat datang di website pribadi aku </p>
+        <div class="hello">
+            Haiii! 👋
+        </div>
+
+        <h1>
+            aku nuts
+            <span class="heart">♡</span>
+        </h1>
+
+        <p>
+            welkam di website akuhh 🌷
+        </p>
     </header>
 
     <nav>
-        <a href="#tentang">Tentang Saya</a>
-        <a href="#pendidikan">Pendidikan</a>
-        <a href="#hobi">Hobi</a>
-        <a href="#kontak">Kontak</a>
+        <a href="#about">🌸 About Me</a>
+        <a href="#biodata">🎀 Biodata</a>
+        <a href="#hobi">🧸 Hobi</a>
+        <a href="#pesan">💌 Surprise</a>
     </nav>
 
-    <section id="tentang">
-        <h2>Tentang Saya</h2>
+    <div class="container">
 
-        <img src="ayam.jpeg" alt="Foto Saya" class="foto">
+        <section class="card" id="about">
 
-        <p>
-            Halo, namaku nata .Aku mahasiswa 
-            yang sedang menempuh pendidikan di Universitas Tanjungpura.
-            Saya memiliki ketertarikan pada bidang teknologi dan komputer.
-        </p>
-    </section>
+            <img src="ayam.jpeg" alt="Foto Saya" class="foto">
 
-    <section id="pendidikan">
-        <h2>Pendidikan</h2>
+            <h2>🌷 About Me</h2>
 
-        <ul>
-            <li>Universitas Tanjungpura</li>
-            <li>Program Studi Rekayasa Sistem Komputer</li>
-            <li>Angkatan: 2025 </li>
-        </ul>
-    </section>
+            <p>
+                Hai! Namaku <b>Fortunata Esfi Efrata Altama</b>.
+                biasa di panggil nata, aku masih coba coba guys
+                mencoba hal-hal baru, dan tentunya masih
+                berusaha memahami kenapa tugas kuliah
+                datang terus 😭.
+            </p>
 
-    <section id="hobi">
-        <h2>Hobi</h2>
+            <p>
+                Ini adalah website kecil yang aku buat
+                untuk memperkenalkan diri gweh
+            </p>
 
-        <ul>
-            <li>Mendengarkan musik</li>
-            <li>Menonton film</li>
-            <li>Belajar teknologi</li>
-            <li>[Hobi kamu]</li>
-        </ul>
-    </section>
+        </section>
 
-    <section id="kontak">
-        <h2>Kontak</h2>
 
-        <p>Email: nataesfi54@gmail.com </p>
-        <p>Instagram: @_nvttss</p>
-    </section>
+        <section class="card" id="biodata">
+
+            <h2>🎀 Biodata</h2>
+
+            <div class="biodata">
+
+                <div class="item">
+                    👤 <b>Nama</b>
+                    <br>
+                    Fortunata Esfi Efrata Altama
+                </div>
+
+                <div class="item">
+                    🎓 <b>Kampus</b>
+                    <br>
+                    Universitas Tanjungpura
+                </div>
+
+                <div class="item">
+                    💻 <b>Jurusan</b>
+                    <br>
+                    Rekayasa Sistem Komputer
+                </div>
+
+                <div class="item">
+                    📚 <b>Semester</b>
+                    <br>
+                    3
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <section class="card" id="hobi">
+
+            <h2>🧸 Things I Like</h2>
+
+            <p>Beberapa hal yang aku suka:</p>
+
+            <div class="hobi">
+
+                <span>🎧 Musik</span>
+                <span>🎬 Film</span>
+                <span>🍜 Makan</span>
+                <span>💻 Coding</span>
+                <span>🛍️ Shopping</span>
+                <span>😴 Tidur</span>
+
+            </div>
+
+        </section>
+
+
+        <section class="card" id="pesan">
+
+            <h2>💌 Pencet tombolnya!</h2>
+
+            <p>
+                Ada sesuatu yang mau aku kasih tahu...
+            </p>
+
+            <button onclick="tampilkanPesan()">
+                ✨ Pencet Aku ✨
+            </button>
+
+            <div id="pesan"></div>
+
+        </section>
+
+    </div>
+
 
     <footer>
-        <p>&copy; 2026 [Nama Kamu]</p>
+
+        Made with ♡ by nuts  🌷
+
     </footer>
+
+
+    <script>
+
+        function tampilkanPesan() {
+
+            document.getElementById("pesan").innerHTML =
+                "Hehehe kamu nemuin pesan rahasia! 🥹💗✨";
+
+        }
+
+    </script>
 
 </body>
 </html>
