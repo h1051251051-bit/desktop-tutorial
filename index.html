@@ -240,10 +240,11 @@
     </nav>
 
 
-    <!-- LAGU AUTOPLAY - TAMBAHAN SAJA -->
+    <!-- LAGU -->
     <audio id="lagu" autoplay loop>
         <source src="laguuu.mpeg" type="audio/mpeg">
     </audio>
+    <!-- SELESAI LAGU -->
 
 
     <div class="container">
@@ -316,7 +317,7 @@ Website kecil ini adalah tempat buat sedikit memperkenalkan diriku. Jadi, selama
                 <span>🎧 Musikkk terutama Daniel Caesar</span>
                 <span>🎬 Film yang ga horror pastinya</span>
                 <span>🍜 Makan yang ga pedass</span>
-                <span>🛍️ Shopping</span>  
+                <span>🛍️ Shopping</span>
 
             </div>
 
@@ -359,6 +360,24 @@ Website kecil ini adalah tempat buat sedikit memperkenalkan diriku. Jadi, selama
         }
 
     </script>
+
+
+    <!-- TAMBAHAN AGAR MUSIK NYALA SETELAH KLIK -->
+    <script>
+
+        document.addEventListener("click", function () {
+
+            const lagu = document.getElementById("lagu");
+
+            if (lagu) {
+                lagu.play();
+            }
+
+        }, { once: true });
+
+    </script>
+    <!-- SELESAI TAMBAHAN -->
+
 
 </body>
 </html>
